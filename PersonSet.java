@@ -1,33 +1,35 @@
 import java.util.ArrayList;
 
 public class PersonSet implements PersonList {
-    protected ArrayList<Person> people;
+    // Declare an ArrayList to hold the Person objects
+    private ArrayList < Person > people = new ArrayList < > ();
 
-    public PersonSet() {
-        people = new ArrayList<>();
-    }
-
-    // Add a Person, making sure no duplicates
+    // Method to add a person to the set
     @Override
-    public void add(Person p) {
-        if (!people.contains(p)) {
-            people.add(p);
+    public void add(Person person) {
+        // Check if the person is not already in list
+        if (!people.contains(person)) {
+            people.add(person);
         }
     }
 
-    // Get a Person by index
+    // Method to get a person from the list by their index
     @Override
     public Person get(int index) {
         return people.get(index);
     }
 
-    // Return the set as a string for easy display
+    // Method to convert the list of people into a readable string format
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (Person p : people) {
-            sb.append(p.toString()).append("\n");
+        // empty string to hold the result
+        String result = "";
+
+        for (Person person: people) {
+            result += person + "\n";
         }
-        return sb.toString();
+
+        // Return string
+        return result;
     }
 }

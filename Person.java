@@ -1,53 +1,44 @@
 public class Person {
+    // Instance variables to store name, height, and weight
     private String name;
     private double height;
     private double weight;
 
-    // Constructor
+    // constructor to initialize the Person object with name, height, and weight
     public Person(String name, double height, double weight) {
-        this.name = name;
-        this.height = height;
-        this.weight = weight;
+        this.name = name; // Set the name
+        this.height = height; // Set the height
+        this.weight = weight; // Set the weight
     }
 
-    // Getters and setters
+    // Getter to return persons name
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    // Getter to return persons height
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
+    // Getter to return persons weight
     public double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    // Overriding equals method to prevent duplicates based on name, height, and weight
+    // Override the equals method to compare two Person objects
     @Override
     public boolean equals(Object o) {
-        if (o == null) return false;
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
-        Person p = (Person) o;
-        return this.name.equals(p.name) && this.height == p.height && this.weight == p.weight;
+        Person person = (Person) o;
+        // Compare name, height, and weight to check if they are the same
+        return name.equals(person.name) && height == person.height && weight == person.weight;
     }
 
-    // Overriding toString to return data in database-ready format
     @Override
     public String toString() {
-        return name + "\t" + height + "\t" + weight;
+        // Return persons name, height, and weight in a readable format
+        return name + "\t" + height + " cm\t" + weight + " kg";
     }
 }

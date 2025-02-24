@@ -1,4 +1,4 @@
 public interface PersonList {
-    void add(Person p);   // Add a Person
+    void add(Person person); // Add a Person
     Person get(int index); // Get a Person by index
 }

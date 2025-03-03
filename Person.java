@@ -41,4 +41,11 @@ public class Person {
         // Return persons name, height, and weight in a readable format
         return name + "\t" + height + " cm\t" + weight + " kg";
     }
+	
+	    // compareTo method for sorting by name (Alphabetical order)
+    @Override
+    public int compareTo(Person otherPerson) {
+        return this.name.compareTo(otherPerson.name); // Compare names in alphabetical order
+    }
+	//https://www.geeksforgeeks.org/java-string-compareto-method-with-examples/
 }

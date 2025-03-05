@@ -1,12 +1,12 @@
 public class PersonImperialSet extends PersonSet {
 
     @Override
-    public void add(Person p) {
-        double heightInInches = convertHeight(p.getHeight());
-        double weightInPounds = convertWeight(p.getWeight());
+    public void add(Person person) {
+        double heightInInches = convertHeight(person.getHeight());
+        double weightInPounds = convertWeight(person.getWeight());
 
         // Create a new Person with converted values
-        Person convertedPerson = new Person(p.getName(), heightInInches, weightInPounds);
+        Person convertedPerson = new Person(person.getName(), heightInInches, weightInPounds);
         
         super.add(convertedPerson); // Add the converted person
     }

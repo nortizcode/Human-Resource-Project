@@ -1,4 +1,6 @@
-public class Person {
+public class Person implements Comparable<Person>{
+	
+	//https://www.geeksforgeeks.org/comparable-interface-in-java-with-examples/
     // Instance variables to store name, height, and weight
     private String name;
     private double height;

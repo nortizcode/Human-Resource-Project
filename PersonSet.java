@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class PersonSet implements PersonList {
     // Declare an ArrayList to hold the Person objects
-    private ArrayList < Person > people = new ArrayList < > ();
+    protected ArrayList < Person > people = new ArrayList < > ();
 
     // Method to add a person to the set
     @Override

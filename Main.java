@@ -50,8 +50,8 @@ public class Main {
             while (fileReader.hasNextLine()) {
                 String line = fileReader.nextLine();
                 String[] data = line.split("\\s+");
-			//https://www.geeksforgeeks.org/split-string-java-examples/
-                
+                //https://www.geeksforgeeks.org/split-string-java-examples/
+
                 // If line has exactly 3 elements (name, height, weight)
                 if (data.length == 3) {
                     String name = data[0];
@@ -63,7 +63,7 @@ public class Main {
                         Person personOrdered = new Person(name, height, weight);
                         Person personImperial = new Person(name, height, weight);
 
-                        orderedSet.add(personOrdered);  // Add to ordered set
+                        orderedSet.add(personOrdered); // Add to ordered set
                         imperialSet.add(personImperial); // Add to imperial set
                     } catch (NumberFormatException e) {
                         System.out.println("Skipping invalid data for person: " + data[0]);

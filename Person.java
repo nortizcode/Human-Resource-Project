@@ -1,6 +1,6 @@
-public class Person implements Comparable<Person>{
-	
-	//https://www.geeksforgeeks.org/comparable-interface-in-java-with-examples/
+public class Person implements Comparable < Person > {
+
+    //https://www.geeksforgeeks.org/comparable-interface-in-java-with-examples/
     // Instance variables to store name, height, and weight
     private String name;
     private double height;
@@ -43,11 +43,11 @@ public class Person implements Comparable<Person>{
         // Return persons name, height, and weight in a readable format
         return name + "\t" + height + " cm\t" + weight + " kg";
     }
-	
-	    // compareTo method for sorting by name (Alphabetical order)
+
+    // compareTo method for sorting by name (Alphabetical order)
     @Override
     public int compareTo(Person otherPerson) {
         return this.name.compareTo(otherPerson.name); // Compare names in alphabetical order
     }
-	//https://www.geeksforgeeks.org/java-string-compareto-method-with-examples/
+    //https://www.geeksforgeeks.org/java-string-compareto-method-with-examples/
 }

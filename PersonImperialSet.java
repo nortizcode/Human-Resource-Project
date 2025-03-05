@@ -7,7 +7,7 @@ public class PersonImperialSet extends PersonSet {
 
         // Create a new Person with converted values
         Person convertedPerson = new Person(person.getName(), heightInInches, weightInPounds);
-        
+
         super.add(convertedPerson); // Add the converted person
     }
 
